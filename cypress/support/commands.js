@@ -8,6 +8,32 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
+Cypress.Commands.add('selectProduct', (productName) => { 
+
+    cy.get('h4.card-title').each( ($el, index, $list) => {
+        const text = $el.text()
+        if( text.includes(productName) ) {
+            cy.get('button.btn.btn-info').eq(index).click()
+        }
+    })
+
+ })
+
+ Cypress.Commands.add('selectCountry', (countryName) => { 
+
+    cy.get('#country').type(countryName)
+
+    // cy.wait(4500)
+
+    cy.get('.suggestions').each( ($el, index, $list) => {
+
+        if( $el.text().includes(countryName) ) {
+            cy.wrap($el).click()
+        }
+    })
+
+ })
+
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
