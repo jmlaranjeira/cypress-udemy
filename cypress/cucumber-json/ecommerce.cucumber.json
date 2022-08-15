@@ -1,0 +1,154 @@
+[
+  {
+    "description": "    Application Regression",
+    "keyword": "Feature",
+    "name": "End to end Ecommerce validation",
+    "line": 3,
+    "id": "end-to-end-ecommerce-validation",
+    "tags": [
+      {
+        "name": "@tag",
+        "line": 2
+      }
+    ],
+    "uri": "ecommerce.feature",
+    "elements": [
+      {
+        "id": "end-to-end-ecommerce-validation;ecommerce-products-delivery",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Ecommerce products delivery",
+        "tags": [
+          {
+            "name": "@tag",
+            "line": 2
+          },
+          {
+            "name": "@Regression",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I open ECommerce Page",
+            "result": {
+              "status": "passed",
+              "duration": 45025000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I add items to Cart",
+            "result": {
+              "status": "passed",
+              "duration": 674000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "Validate the total prices",
+            "result": {
+              "status": "passed",
+              "duration": 144000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "select the country submit and verify Thankyou",
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "CypressError: Timed out retrying after 8050ms: `cy.click()` failed because this element:\n\n`<div class=\"checkbox checkbox-primary\">...</div>`\n\nis being covered by another element:\n\n`<a>India</a>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureDescendents (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:162348:78)\n    at ensureDescendents (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:147721:8)\n    at ensureDescendentsAndScroll (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:147728:14)\n    at ensureElIsNotCovered (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:147860:5)\n    at runAllChecks (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:148050:52)\n    at retryActionability (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:148074:16)\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise.attempt.Promise.try (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:10286:29)\n    at whenStable (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:167274:65)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:166728:14\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:11129:18)\n    at Promise._fulfill (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:11073:18)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:12687:46\nFrom Your Spec Code:\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:86:31)\n    at Context.resolveAndRunStepDefinition (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:12454:29)\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\BDD\\ecommerce.feature:11775:35)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "end-to-end-ecommerce-validation;filling-the-form-to-shop",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Filling the form to shop",
+        "tags": [
+          {
+            "name": "@tag",
+            "line": 2
+          },
+          {
+            "name": "@Smoke",
+            "line": 14
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I open ECommerce Page",
+            "result": {
+              "status": "passed",
+              "duration": 1288000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "gender"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Bob",
+                      "Female"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I fill the form details",
+            "result": {
+              "status": "passed",
+              "duration": 454000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "Validate the form behavior",
+            "result": {
+              "status": "passed",
+              "duration": 56000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "Select the Shop Page",
+            "result": {
+              "status": "passed",
+              "duration": 561000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -22,7 +22,7 @@ Cypress.Commands.add('selectProduct', (productName) => {
  Cypress.Commands.add('selectCountry', (countryName) => { 
 
     cy.get('#country').type(countryName)
-
+    
     // cy.wait(4500)
 
     cy.get('.suggestions').each( ($el, index, $list) => {
