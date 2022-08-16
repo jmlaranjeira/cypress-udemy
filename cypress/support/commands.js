@@ -19,10 +19,10 @@ Cypress.Commands.add('selectProduct', (productName) => {
 
  })
 
- Cypress.Commands.add('selectCountry', (countryName) => { 
+Cypress.Commands.add('selectCountry', (countryName) => { 
 
     cy.get('#country').type(countryName)
-    
+
     // cy.wait(4500)
 
     cy.get('.suggestions').each( ($el, index, $list) => {
@@ -32,8 +32,19 @@ Cypress.Commands.add('selectProduct', (productName) => {
         }
     })
 
- })
+})
 
+Cypress.Commands.add('LoginAPI', () => { 
+    
+    cy.request('POST', 'https://rahulshettyacademy.com/api/ecom/auth/login', 
+    {
+        userEmail: "juanma_lgm@hotmail.com", 
+        userPassword: "Perro2019."
+    }).then((response) => {
+        expect(response.status).to.eq(200)
+        Cypress.env('token', response.body.token)
+    })
+})
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
